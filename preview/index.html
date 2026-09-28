@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MineX Community Web installation preview. A shared world, hosted by communities. Gameplay access is planned.">
+  <title>MineX Community Web — Installation preview</title>
+  <style>
+    :root{color-scheme:dark;--bg:#10151e;--panel:#19212e;--ink:#f3f5fa;--muted:#b7c1d2;--gold:#f4cc60;--line:#344054}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .wrap{max-width:1080px;margin:auto;padding:32px 24px 60px}header{display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding-bottom:24px}
+    .brand{font-weight:850;letter-spacing:.03em;font-size:23px}.brand span{color:var(--gold)}.status{color:var(--gold);font-size:13px;border:1px solid #796532;padding:6px 12px;border-radius:999px}
+    main{padding-top:72px}.eyebrow{text-transform:uppercase;color:var(--gold);letter-spacing:.15em;font-weight:650;font-size:12px}
+    h1{font-size:clamp(38px,7vw,70px);line-height:1.06;letter-spacing:-.04em;max-width:800px;margin:18px 0 25px}h1 span{color:var(--gold)}
+    .lead{max-width:690px;font-size:19px;color:var(--muted)}.notice{border-left:3px solid var(--gold);padding:12px 20px;background:#24251f;margin:30px 0 42px;max-width:800px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:15px;padding:25px;background:var(--panel)}
+    .number{color:var(--gold);font-size:13px;font-weight:750}h2{font-size:20px;line-height:1.3;margin:12px 0}p{margin:0 0 14px}.card p{color:var(--muted);font-size:15px;margin-bottom:0}
+    .steps{margin-top:42px;padding:25px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.steps p{color:var(--muted);max-width:850px}
+    footer{margin-top:36px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}a{color:var(--gold)}a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}main{padding-top:45px}header{align-items:flex-start;flex-direction:column}.wrap{padding-inline:20px}.lead{font-size:17px}}
+  </style>
+</head>
+<body data-stage="installation-preview">
+  <div class="wrap">
+    <header><div class="brand">Mine<span>X</span> / Community Web</div><div class="status">Installation preview · Gameplay not connected</div></header>
+    <main>
+      <div class="eyebrow">One MineX. Many communities.</div>
+      <h1>Your community's website.<br><span>Our shared world.</span></h1>
+      <p class="lead">A project for community-hosted web experiences that bring players into the same MineX worlds, with their existing account and progress.</p>
+      <div class="notice"><strong>This installation is working.</strong><br>This page verifies the local preview only. It has no sign-in form, game connection, or payment capability. Connected access is planned and will require manual approval.</div>
+      <section class="grid" aria-label="Planned community experience">
+        <article class="card"><div class="number">01 / COMMUNITY HOSTING</div><h2>Your place to welcome players</h2><p>Host the web experience on your domain. Future client releases will connect to the shared MineX service.</p></article>
+        <article class="card"><div class="number">02 / SHARED PLAY</div><h2>The same MineX players</h2><p>Keep accounts, characters, and worlds in MineX while communities offer their own entry points.</p></article>
+        <article class="card"><div class="number">03 / OFFICIAL APPROVAL</div><h2>A clear boundary for sensitive actions</h2><p>Account access and sensitive approval belong on official MineX pages. Hosting a website does not grant authority over a player's account.</p></article>
+      </section>
+      <section class="steps"><h2>What happens next?</h2><p>Read the repository's pilot guide, express interest through its public application template, and coordinate a small test once the connected integration is ready. No VPS purchase is needed to start with this preview.</p></section>
+    </main>
+    <footer><span>Preview only. No player information is collected by this page.</span><a href="https://minex.gg/" target="_blank" rel="noopener noreferrer">Visit MineX ↗</a></footer>
+  </div>
+</body>
+</html>

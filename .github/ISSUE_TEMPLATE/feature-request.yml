@@ -1,0 +1,23 @@
+name: Preview feedback or design proposal
+description: Report an installation-preview problem or propose a public improvement.
+body:
+  - type: markdown
+    attributes:
+      value: For sensitive findings, follow SECURITY.md instead of including details here.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would you like to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduction, environment, or proposed behavior
+      description: Use synthetic examples. Exclude credentials, private logs, and player data.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Which current or planned component does this affect?

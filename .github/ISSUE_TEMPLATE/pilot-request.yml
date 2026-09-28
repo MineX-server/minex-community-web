@@ -1,0 +1,63 @@
+name: Community pilot request
+description: Express interest in a manually reviewed MineX community installation.
+title: "[Pilot request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Connected community gameplay is not available in this initial release.
+        This public request expresses interest; it does not grant access.
+        Do not include credentials, private contact details, VPS access, or player data.
+  - type: input
+    id: community
+    attributes:
+      label: Public community name
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Tell us about the community and the test you want to run
+    validations:
+      required: true
+  - type: input
+    id: public_domain
+    attributes:
+      label: Public website or proposed domain (optional)
+      description: A purchased domain or VPS is not needed to express interest.
+  - type: input
+    id: region
+    attributes:
+      label: Region and preferred languages
+    validations:
+      required: true
+  - type: dropdown
+    id: group_size
+    attributes:
+      label: Approximate simultaneous test group
+      options:
+        - Up to 10 players
+        - 11–50 players
+        - More than 50 players
+        - Not decided yet
+    validations:
+      required: true
+  - type: dropdown
+    id: machine
+    attributes:
+      label: Test machine availability
+      options:
+        - I will start with the local preview
+        - I already have a spare VPS
+        - I would need to arrange a VPS later
+  - type: checkboxes
+    id: expectations
+    attributes:
+      label: Pilot expectations
+      options:
+        - label: I understand that this request is public and contains no credentials or private player data.
+          required: true
+        - label: I understand that a maintainer must review the installation and MineX must activate access centrally when the connected pilot is ready.
+          required: true
+        - label: I understand that the preview does not currently connect to MineX gameplay.
+          required: true
