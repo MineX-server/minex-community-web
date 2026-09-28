@@ -1,138 +1,63 @@
 # MineX Community Web
 
-**Host a community entry point. Play together on MineX.**
+**Building open-source community websites for one shared MineX game.**
 
-[Español](README.es.md) · [Pilot access](docs/pilot.md) · [Roadmap](docs/roadmap.md) · [VPS testing](docs/vps-test-plan.md)
+[Español](README.es.md) · [Project brief](docs/project-brief.md) · [Roadmap](docs/roadmap.md)
 
-MineX Community Web is a project to let communities host a web client on their own domain while their players join the same MineX worlds, use their existing MineX account, and play alongside other MineX players.
+The idea is simple: a community runs a MineX website on its own VPS or domain. Players open that website, sign in through MineX, and join the same MineX worlds as everyone else. Their account, character, and progress stay with MineX.
 
-The community hosts the web experience. MineX continues to operate the shared game servers, accounts, and sensitive services.
+Think of each VPS as another **doorway** to the same game in the cloud. It hosts the website; it does not run a new MineX world or a blockchain node.
 
-> **Current stage: public planning and a local installation preview.**
-> Community gameplay access is not available in this release. The first connected pilot will require manual approval from MineX. This repository does not yet contain the playable client or an installer for connected gameplay.
+> **What works today:** this repository has an open-source installation preview, documentation, and tests. You can run the preview on a computer or VPS. **It cannot launch the game yet.** The playable client and connection to MineX are future work, and the first connected installations will need manual approval.
 
-## One MineX, many community websites
+## How it should work
 
-A community should be able to share its own web address, welcome its players, and bring them into MineX without operating a separate game world.
+1. A community installs the future web package on its VPS.
+2. A player visits that community's website.
+3. The player signs in on an official MineX page.
+4. The browser joins the shared MineX game. The player sees the same worlds and other players.
 
-The intended experience:
+MineX runs the shared game, accounts, and sensitive services. A community website can welcome players, but it cannot approve account or wallet actions for them.
 
-1. A player visits the community website.
-2. They select **Continue with MineX**.
-3. They sign in on an official MineX account page and return to the community website.
-4. Their browser connects to the shared MineX service.
-5. They play with the same community of players and retain their MineX identity and progress.
+## Try what exists now
 
-When a sensitive operation needs approval, the player reviews it on an official MineX approval page. The community website does not receive permission to approve it on their behalf.
+You need Git and Python 3.10 or later. This starts a **preview page**, not the game:
 
-These steps describe the target experience; the connected flow is still being built and verified.
-
-```mermaid
-flowchart LR
-    Player[Player's browser] --> Community[Community website]
-    Player --> Account[Official MineX account page]
-    Player --> Shared[Shared MineX game service]
-    Shared --> Worlds[The same MineX worlds and players]
-    Player --> Approval[Official approval page when needed]
+```bash
+git clone https://github.com/MineX-server/minex-community-web.git
+cd minex-community-web
+python3 tools/preview.py --port 8787
 ```
 
-## What is available today?
+Open <http://127.0.0.1:8787> on that computer. Stop the preview with `Ctrl+C`.
 
-| Component | Status |
-| --- | --- |
-| Public architecture and implementation roadmap | Available here |
-| Manual pilot application template | Available here; interest requests do not grant access |
-| Local website installation preview | Available; no account, game, or payment connection |
-| Public-content checks and preview tests | Available; run locally or in GitHub Actions |
-| Community login and game admission | Planned; requires central implementation and testing |
-| Playable client distribution | Pending a separate artifact and dependency review |
-| Connected VPS installer | Planned |
-| Automatic operator onboarding | Future phase, after the manually approved pilot |
-
-## Try the installation preview
-
-No VPS purchase, MineX account, API key, or wallet is needed for this step.
-Download this repository, open a terminal in its folder, and use Python 3.10 or later:
+To check the package:
 
 ```bash
 python3 tools/check_public.py
 python3 -m unittest discover -s tests -v
-python3 tools/preview.py --port 8787
 ```
 
-Open **http://127.0.0.1:8787** in your browser. Stop the process with `Ctrl+C`.
+For an SSH tunnel to a VPS, follow the [VPS test plan](docs/vps-test-plan.md). The preview does not ask for a MineX password, wallet, or API key.
 
-The page is an installation preview with no sign-in form and no game engine. A successful preview verifies that the small web service runs; it does not verify that a community can connect to MineX.
+## What comes next
 
-For a machine reached over SSH, see the [VPS test plan](docs/vps-test-plan.md). It starts with a private tunnel, then defines the separate work needed for a connected pilot.
-
-## Join the first pilot
-
-The first operators will be admitted manually, in small groups.
-
-After this repository is published, open an issue using **Community pilot request**. Share a public community name, region, expected group size, and an optional public domain. A VPS is not required to express interest.
-
-A maintainer reviews the request. When the connected pilot is ready, MineX will verify the domain, assign an installation identity and limits, and activate access through its central service.
-
-**A GitHub issue, label, fork, or local configuration file is not an access credential.** Closing or approving an issue will not automatically enable a server.
-
-Approval applies to connecting an installation to MineX. Reading the repository and running the local preview do not need approval.
-
-See [pilot access and lifecycle](docs/pilot.md).
-
-## What an operator hosts
-
-| Community operator | MineX |
+| Now | Goal |
 | --- | --- |
-| Community domain and web hosting | Shared worlds and game admission |
-| Launcher interface and, in a later release, reviewed client artifacts | Accounts, characters, permissions, and progress |
-| Public installation configuration | Official sign-in and sensitive approvals |
-| Their website's availability | Private wallet services and financial authorization |
+| Public preview, tests, and installation plan | A reviewed, playable browser package |
+| Community interest requests | Approved VPS installations connected to MineX |
+| Shared game operated by MineX | Players joining it from many community websites |
 
-The future package is intended to connect to the existing MineX service. It does not include the private components needed to run an independent copy of MineX.
+The [roadmap](docs/roadmap.md) lists the work and tests needed before we can say “install it and play.” You can [request a place in the first pilot](docs/pilot.md); an issue does not activate a server by itself.
 
-MineX's existing Solana integration remains behind official services. This repository currently provides no wallet implementation, transaction execution service, or authority over player funds.
+## Why open source and Solana?
 
-## Hosting can be distributed; accounts remain central
+The goal is to make the **website hosting layer** reusable, so communities in different places can help people reach the same MineX game. MineX already has a Solana integration in its official services; this repository does not publish a wallet implementation, private API, or financial approval system. This is not a token or play-to-earn proposal.
 
-Community websites can run on different providers and in different countries. MineX still operates the shared accounts, worlds, and authorization services.
+Hosting can be spread across independent VPS providers. The worlds and account authority remain with MineX, so we describe this as **distributed web hosting**, not a fully decentralized game. The [project brief](docs/project-brief.md) separates the public work already done from the next milestones.
 
-That means community hosting with central MineX services. It is not a promise that the whole game is decentralized.
+## Contribute and learn more
 
-In a later phase, the official playable website could be retired while official account, approval, and connection services remain available. That transition is planned, not scheduled or implemented here.
+Start with [CONTRIBUTING.md](CONTRIBUTING.md). See [architecture](docs/architecture.md), [testing](docs/testing.md), and [security reporting](SECURITY.md) for details. Never post passwords, OTPs, SSH keys, or wallet recovery information in an issue.
 
-## Trust and player approval
-
-A community controls the files it serves and can modify its frontend. The design must remain safe under that assumption.
-
-- Player sign-in happens on an official account origin.
-- Access to a game session does not confer financial approval rights.
-- Sensitive approval uses canonical operation details from MineX.
-- An IP address, website name, or client-declared status is not proof of authorization.
-- MineX can suspend a community installation's access without deleting the players' accounts.
-- Compiled or obfuscated client files do not replace these server-side rules.
-
-These are acceptance requirements for connected releases, not a claim that the local preview implements them. Read the [architecture](docs/architecture.md) and [testing boundaries](docs/testing.md).
-
-## Build with us
-
-Useful early contributions include documentation, translations, accessibility feedback, installation testing, and clear reports about the local preview.
-
-Start with [CONTRIBUTING.md](CONTRIBUTING.md). Maintainers review changes before release. Operator requests and code contributions use separate review processes.
-
-This repository does not ask for SSH keys, passwords, OTPs, API credentials, or wallet recovery information. See [SECURITY.md](SECURITY.md) for private reporting.
-
-## Repository guide
-
-- [Architecture](docs/architecture.md): boundaries and target browser flow.
-- [Pilot access](docs/pilot.md): manual review, activation, limits, and suspension.
-- [Roadmap](docs/roadmap.md): stages and evidence needed to advance.
-- [VPS test plan](docs/vps-test-plan.md): local preview, external test machine, connected rehearsal.
-- [Testing](docs/testing.md): what the included checks establish.
-- [Maintainer setup](docs/maintainer-setup.md): publication and repository settings.
-
-## License
-
-The original documentation, preview, and tools in this repository are available under the [MIT License](LICENSE).
-
-This license covers the files published here. It does not grant rights to the MineX name or branding, access to MineX services, private server software, or third-party game code and assets. Any future client distribution will document the applicable components and licenses separately.
+The original files in this repository use the [MIT License](LICENSE). The license does not grant rights to MineX branding, private services, or third-party game code and assets. Any future playable client needs its own dependency and distribution review.

@@ -13,6 +13,7 @@ SECURITY.md
 docs/architecture.md
 docs/maintainer-setup.md
 docs/pilot.md
+docs/project-brief.md
 docs/roadmap.md
 docs/testing.md
 docs/vps-test-plan.md

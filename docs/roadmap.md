@@ -5,7 +5,7 @@ Items marked as available are present in this repository; connected features nee
 
 | Stage | Deliverable | Exit evidence | Status |
 | --- | --- | --- | --- |
-| 0. Public foundation | README, architecture, manual-pilot process, preview and checks | Clean public file list; local tests pass | Available locally; remote publication depends on repository setup |
+| 0. Public foundation | README, architecture, manual-pilot process, preview and checks | Public clean clone, local tests, and GitHub Actions pass | Published and verified |
 | 1. Distribution contract | Inventory of client artifacts, dependencies, versions and public scope | Reviewed package contains only distributable components | Planned |
 | 2. Account and admission | Official sign-in handoff and installation-scoped game access | Correct account joins; unauthorized and revoked installations are rejected | Planned |
 | 3. Independent approvals | Official review and authorization for all sensitive operations reachable from the game | Modified frontend cannot authorize an operation by itself | Required before a connected community pilot |
