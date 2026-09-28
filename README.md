@@ -55,10 +55,10 @@ For an SSH tunnel to a VPS, follow the [VPS test plan](docs/vps-test-plan.md). T
 | Now | Goal |
 | --- | --- |
 | Public preview, tests, and installation plan | A reviewed, playable browser package |
-| Community interest requests | Approved VPS installations connected to MineX |
+| [Community interest requests](https://github.com/MineX-server/minex-community-web/issues/new?template=pilot-request.yml) | Approved VPS installations connected to MineX |
 | Shared game operated by MineX | Players joining it from many community websites |
 
-The [roadmap](docs/roadmap.md) lists the work and tests needed before we can say “install it and play.” You can [request a place in the first pilot](docs/pilot.md); an issue does not activate a server by itself.
+The [roadmap](docs/roadmap.md) lists the work and tests needed before we can say “install it and play.” [@MineX-server](https://github.com/MineX-server) is the first recorded interested operator. You can [add your community to the interest list](https://github.com/MineX-server/minex-community-web/issues/new?template=pilot-request.yml); a request does not activate a server by itself. See the [pilot process](docs/pilot.md).
 
 ## Why open source and Solana?
 

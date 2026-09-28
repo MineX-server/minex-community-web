@@ -55,10 +55,10 @@ Si usas una VPS mediante SSH, sigue el [plan de pruebas en VPS](docs/vps-test-pl
 | Ahora | Objetivo |
 | --- | --- |
 | Vista previa pública, pruebas y plan de instalación | Paquete jugable para el navegador, revisado |
-| Solicitudes de comunidades interesadas | Instalaciones aprobadas y conectadas a MineX |
+| [Solicitudes de comunidades interesadas](https://github.com/MineX-server/minex-community-web/issues/new?template=pilot-request.yml) | Instalaciones aprobadas y conectadas a MineX |
 | MineX opera el juego compartido | Jugadores entrando desde muchas webs comunitarias |
 
-La [hoja de ruta](docs/roadmap.md) muestra qué debemos construir y probar antes de poder decir «instálalo y juega». Puedes [solicitar participar en el primer piloto](docs/pilot.md); una incidencia no activa por sí sola un servidor.
+La [hoja de ruta](docs/roadmap.md) muestra qué debemos construir y probar antes de poder decir «instálalo y juega». [@MineX-server](https://github.com/MineX-server) es el primer operador interesado registrado. Puedes [añadir tu comunidad a la lista](https://github.com/MineX-server/minex-community-web/issues/new?template=pilot-request.yml); una solicitud no activa por sí sola un servidor. Consulta el [proceso del piloto](docs/pilot.md).
 
 ## ¿Por qué código abierto y Solana?
 

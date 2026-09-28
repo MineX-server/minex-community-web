@@ -2,7 +2,7 @@
 
 ## Current status
 
-The published repository accepts expressions of interest.
+The published repository accepts expressions of interest through its [Community interest request form](https://github.com/MineX-server/minex-community-web/issues/new?template=pilot-request.yml).
 Connected community gameplay is not enabled by this initial release.
 An application can be reviewed while the integration is being completed; review does not mean the installation is active.
 
@@ -11,14 +11,15 @@ Self-service onboarding is a later roadmap phase, not a switch available to oper
 
 ## Applying
 
-Use the **Community pilot request** issue template in the canonical GitHub repository.
+Use the **Community interest request** issue template in the canonical GitHub repository.
+The first interested operator is [@MineX-server](https://github.com/MineX-server), the repository owner. This records interest in a reference test, not an approved or active installation.
 Provide only information intended to be public:
 
 - Community name and a short description.
 - An optional public website or proposed domain.
-- Region and preferred languages.
-- Approximate concurrent group size for a test.
-- Whether a test machine is already available.
+- Region and preferred languages, if known.
+- Approximate concurrent group size, if known.
+- Whether a test machine is already available, if known.
 
 Your GitHub profile is sufficient for the public application.
 Do not include a home address, private email, SSH access, API credentials, or player records.
