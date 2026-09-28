@@ -7,6 +7,7 @@ This page provides plain wording for community introductions and grant updates. 
 MineX Community Web is building an open-source way for communities to host the browser entrance to one shared MineX game. Each community could run the website on its own VPS and domain. Players would sign in through MineX, then play in the same worlds with their existing account and progress. MineX would continue to run the game and its official Solana-related services.
 
 It is like adding more doors to one game in the cloud. A community VPS is a web host, not a separate MineX server or a blockchain node.
+If one community website goes away, the intended player experience is to use another doorway with the same MineX account, character, progress, and wallet access. Existing players would not create a new account for every doorway. This spreads web hosting across communities while the shared game remains operated by MineX.
 
 ## What has been delivered
 

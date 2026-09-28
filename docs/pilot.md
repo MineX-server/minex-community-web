@@ -2,7 +2,7 @@
 
 ## Current status
 
-The repository accepts expressions of interest once published.
+The published repository accepts expressions of interest.
 Connected community gameplay is not enabled by this initial release.
 An application can be reviewed while the integration is being completed; review does not mean the installation is active.
 

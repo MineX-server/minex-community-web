@@ -8,6 +8,8 @@ La idea es sencilla: una comunidad instala la web de MineX en su VPS o dominio. 
 
 Piensa en cada VPS como otra **puerta de entrada** al mismo juego en la nube. Aloja la web; no crea otro mundo de MineX ni funciona como un nodo de blockchain.
 
+*Un mundo compartido debería ser más grande que cualquiera de las webs que lo abren.*
+
 > **Qué funciona hoy:** este repositorio incluye una vista previa de instalación de código abierto, documentación y pruebas. Puedes ejecutar la vista previa en un ordenador o una VPS. **Todavía no abre el juego.** El cliente jugable y la conexión con MineX son trabajo pendiente; las primeras instalaciones conectadas necesitarán aprobación manual.
 
 ## Cómo debería funcionar
@@ -18,6 +20,14 @@ Piensa en cada VPS como otra **puerta de entrada** al mismo juego en la nube. Al
 4. Su navegador entra en el MineX compartido, con los mismos mundos y jugadores.
 
 MineX mantiene el juego, las cuentas y los servicios sensibles. La web de una comunidad puede recibir jugadores, pero no aprobar operaciones de cuenta o wallet por ellos.
+
+## ¿Por qué muchas puertas?
+
+El objetivo es que cualquiera pueda alojar una puerta en su propia VPS, sin depender de que MineX mantenga todas las webs. Las comunidades de distintos países pueden elegir dónde alojar la suya.
+
+Si una web cierra o deja de estar disponible en una región, un jugador debería poder entrar por otra, siempre que el servicio compartido de MineX sea accesible. Encontraría la misma cuenta, personaje, progreso y acceso a su wallet de MineX. Un jugador existente no tendría que registrarse de nuevo en cada web; un jugador nuevo crearía una sola cuenta MineX mediante el acceso oficial.
+
+Así dependemos menos de una única web y las comunidades pueden ayudar de verdad a mantener MineX accesible. Esto no hace que el juego compartido sea independiente de los servidores de MineX. La idea es dar más resistencia a la puerta de entrada mientras todos siguen jugando juntos.
 
 ## Prueba lo que ya existe
 
@@ -52,7 +62,7 @@ La [hoja de ruta](docs/roadmap.md) muestra qué debemos construir y probar antes
 
 ## ¿Por qué código abierto y Solana?
 
-Queremos que la **capa de alojamiento web** sea reutilizable para que comunidades de distintos lugares ayuden a entrar en el mismo MineX. MineX ya integra Solana en sus servicios oficiales; este repositorio no publica una wallet, una API privada ni un sistema de aprobación financiera. No es una propuesta de token ni de play-to-earn.
+Queremos que la **capa de alojamiento web** sea reutilizable para que comunidades de distintos lugares ayuden a entrar en el mismo MineX y su economía conectada con Solana. La wallet del jugador sigue vinculada a su cuenta MineX, no a la web comunitaria que visita. Este repositorio no publica una wallet, una API privada ni un sistema de aprobación financiera. No es una propuesta de token ni de play-to-earn.
 
 Las webs pueden repartirse entre VPS independientes. Los mundos y las cuentas siguen bajo MineX: hablamos de **alojamiento web distribuido**, no de un juego totalmente descentralizado. El [resumen del proyecto](docs/project-brief.md) separa lo que ya es público de los próximos hitos.
 

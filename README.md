@@ -8,6 +8,8 @@ The idea is simple: a community runs a MineX website on its own VPS or domain. P
 
 Think of each VPS as another **doorway** to the same game in the cloud. It hosts the website; it does not run a new MineX world or a blockchain node.
 
+*A shared world should be bigger than any one website that opens it.*
+
 > **What works today:** this repository has an open-source installation preview, documentation, and tests. You can run the preview on a computer or VPS. **It cannot launch the game yet.** The playable client and connection to MineX are future work, and the first connected installations will need manual approval.
 
 ## How it should work
@@ -18,6 +20,14 @@ Think of each VPS as another **doorway** to the same game in the cloud. It hosts
 4. The browser joins the shared MineX game. The player sees the same worlds and other players.
 
 MineX runs the shared game, accounts, and sensitive services. A community website can welcome players, but it cannot approve account or wallet actions for them.
+
+## Why many doors?
+
+The goal is for anyone to be able to host a doorway on their own VPS, rather than depending on MineX to run every website. Communities in different countries can choose where to host theirs.
+
+If one website closes or becomes unavailable in a region, a player should be able to enter through another, provided the shared MineX service is reachable. They should find the same MineX account, character, progress, and wallet access. An existing player would not need to register again for each website; a new player would create one MineX account through the official sign-in flow.
+
+That makes access less dependent on a single website and gives communities a real part in keeping MineX reachable. It does not make the shared game independent of MineX's servers. The aim is resilience at the web entrance while everyone still plays together.
 
 ## Try what exists now
 
@@ -52,7 +62,7 @@ The [roadmap](docs/roadmap.md) lists the work and tests needed before we can say
 
 ## Why open source and Solana?
 
-The goal is to make the **website hosting layer** reusable, so communities in different places can help people reach the same MineX game. MineX already has a Solana integration in its official services; this repository does not publish a wallet implementation, private API, or financial approval system. This is not a token or play-to-earn proposal.
+The goal is to make the **website hosting layer** reusable, so communities in different places can help people reach the same MineX game and its Solana-connected economy. The player's wallet remains tied to their MineX account, not to whichever community website they visit. This repository does not publish a wallet implementation, private API, or financial approval system. This is not a token or play-to-earn proposal.
 
 Hosting can be spread across independent VPS providers. The worlds and account authority remain with MineX, so we describe this as **distributed web hosting**, not a fully decentralized game. The [project brief](docs/project-brief.md) separates the public work already done from the next milestones.
 
